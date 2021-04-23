@@ -362,6 +362,9 @@ http://www.opengl.org/registry/doc/GLSLangSpec.4.00.7.pdf
       <keyword>gl_SubgroupSize</keyword>
       <keyword>gl_SubgroupInvocationID</keyword>
       <keyword>gl_Subgroup(Eq|Ge|Gt|Le|Lt)Mask</keyword>
+      <!-- GLSL_EXT_fragment_shading_rate -->
+      <keyword>gl_ShadingRateEXT</keyword>
+      <keyword>gl_PrimitiveShadingRateEXT</keyword>
     </context>
 
     <context id="builtin-constants" style-ref="builtin-constant">
@@ -397,6 +400,11 @@ http://www.opengl.org/registry/doc/GLSLangSpec.4.00.7.pdf
       <keyword>gl_MaxTessPatchComponents</keyword>
       <keyword>gl_MaxPatchVertices</keyword>
       <keyword>gl_MaxTessGenLevel</keyword>
+      <!-- GLSL_EXT_fragment_shading_rate -->
+      <keyword>gl_ShadingRateFlag2VerticalPixelsEXT</keyword>
+      <keyword>gl_ShadingRateFlag4VerticalPixelsEXT</keyword>
+      <keyword>gl_ShadingRateFlag2HorizontalPixelsEXT</keyword>
+      <keyword>gl_ShadingRateFlag4HorizontalPixelsEXT</keyword>
     </context>
 
 
