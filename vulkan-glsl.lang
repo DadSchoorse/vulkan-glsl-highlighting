@@ -107,6 +107,8 @@ http://www.opengl.org/registry/doc/GLSLangSpec.4.00.7.pdf
       <!-- vulkan -->
       <keyword>offset</keyword>
       <keyword>align</keyword>
+      <!-- GL_EXT_demote_to_helper_invocation -->
+      <keyword>demote</keyword>
     </context>
 
     <context id="primitives" style-ref="type">
@@ -353,6 +355,8 @@ http://www.opengl.org/registry/doc/GLSLangSpec.4.00.7.pdf
       <keyword>nonuniformEXT</keyword>
       <!-- GL_EXT_subgroupuniform_qualifier -->
       <keyword>subgroupuniformEXT</keyword>
+      <!-- GL_EXT_demote_to_helper_invocation -->
+      <keyword>helperInvocationEXT</keyword>
     </context>
 
     <context id="builtin-variables" style-ref="builtin-variable">
