@@ -338,6 +338,16 @@ http://www.opengl.org/registry/doc/GLSLangSpec.4.00.7.pdf
       <keyword>(u)?int64BitsToDouble</keyword>
       <keyword>(un)?packFloat2x16</keyword>
       <keyword>(un)?pack(Int|Uint)[24]x16</keyword>
+      <!-- GL_KHR_shader_subgroup -->
+      <keyword>subgroupBarrier</keyword>
+      <keyword>subgroupMemoryBarrier(Buffer|Shared|Image)?</keyword>
+      <keyword>subgroup(Elect|All|Any|AllEqual)</keyword>
+      <keyword>subgroupBroadcast(First)?</keyword>
+      <keyword>subgroupBallot(BitExtract|BitCount|InclusiveBitCount|ExclusiveBitCount|FindLSB|FindMSB)?</keyword>
+      <keyword>subgroupInverseBallot</keyword>
+      <keyword>subgroupShuffle(Xor|Up|Down)?</keyword>
+      <keyword>subgroup(Inclusive|Exclusive|Clustered)?(Add|Mul|Min|Max|And|Or|Xor)</keyword>
+      <keyword>subgroupQuad(Broadcast|SwapHorizontal|SwapVertical|SwapDiagonal)</keyword>
     </context>
 
     <context id="builtin-variables" style-ref="builtin-variable">
@@ -375,6 +385,12 @@ http://www.opengl.org/registry/doc/GLSLangSpec.4.00.7.pdf
       <keyword>gl_LocalInvocationID</keyword>
       <keyword>gl_GlobalInvocationID</keyword>
       <keyword>gl_LocalInvocationIndex</keyword>
+      <!-- GL_KHR_shader_subgroup -->
+      <keyword>gl_NumSubgroups</keyword>
+      <keyword>gl_SubgroupID</keyword>
+      <keyword>gl_SubgroupSize</keyword>
+      <keyword>gl_SubgroupInvocationID</keyword>
+      <keyword>gl_Subgroup(Eq|Ge|Gt|Le|Lt)Mask</keyword>
     </context>
 
     <context id="builtin-constants" style-ref="builtin-constant">
