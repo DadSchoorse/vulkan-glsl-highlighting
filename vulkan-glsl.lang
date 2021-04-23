@@ -146,6 +146,12 @@ http://www.opengl.org/registry/doc/GLSLangSpec.4.00.7.pdf
       <!-- vulkan input attachment -->
       <keyword>[iu]?subpassInput</keyword>
       <keyword>[iu]?subpassInputMS</keyword>
+      <!-- GL_EXT_shader_explicit_arithmetic_types -->
+      <keyword>float(64|32|16)_t</keyword>
+      <keyword>f(64|32|16)vec[2-4]</keyword>
+      <keyword>f(64|32|16)mat[2-4](x[2-4])?</keyword>
+      <keyword>(int|uint)(64|32|16|8)_t</keyword>
+      <keyword>[iu](64|32|16|8)vec[2-4]</keyword>
     </context>
 
     <context id="reserved-keywords-for-future-use" style-ref="future-use">
@@ -322,6 +328,16 @@ http://www.opengl.org/registry/doc/GLSLangSpec.4.00.7.pdf
       <keyword>memoryBarrierShared</keyword>
       <keyword>memoryBarrierImage</keyword>
       <keyword>groupMemoryBarrier</keyword>
+      <!-- GL_EXT_shader_explicit_arithmetic_types -->
+      <keyword>pack(64|32|16)</keyword>
+      <keyword>unpack(32|16|8)</keyword>
+      <keyword>(un)?pack(Int|Uint)2x32</keyword>
+      <keyword>(half|float16)BitsTo(Int|Uint)16</keyword>
+      <keyword>(u)?int16BitsTo(Half|Float16)</keyword>
+      <keyword>doubleBitsTo(Int|Uint)64</keyword>
+      <keyword>(u)?int64BitsToDouble</keyword>
+      <keyword>(un)?packFloat2x16</keyword>
+      <keyword>(un)?pack(Int|Uint)[24]x16</keyword>
     </context>
 
     <context id="builtin-variables" style-ref="builtin-variable">
