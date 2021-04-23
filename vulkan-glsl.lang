@@ -348,6 +348,10 @@ http://www.opengl.org/registry/doc/GLSLangSpec.4.00.7.pdf
       <keyword>subgroupShuffle(Xor|Up|Down)?</keyword>
       <keyword>subgroup(Inclusive|Exclusive|Clustered)?(Add|Mul|Min|Max|And|Or|Xor)</keyword>
       <keyword>subgroupQuad(Broadcast|SwapHorizontal|SwapVertical|SwapDiagonal)</keyword>
+      <!-- GL_EXT_nonuniform_qualifier -->
+      <keyword>nonuniformEXT</keyword>
+      <!-- GL_EXT_subgroupuniform_qualifier -->
+      <keyword>subgroupuniformEXT</keyword>
     </context>
 
     <context id="builtin-variables" style-ref="builtin-variable">
