@@ -3,9 +3,10 @@
 
  This file is part of GtkSourceView
 
- Authors:  Chong Kai Xiong, Simon Wenner
+ Authors:  Chong Kai Xiong, Simon Wenner, Georg Lehmann
  Copyright (C) 2005-2006  Chong Kai Xiong  <descender@phreaker.net>
  Copyright (C) 2009-2010  Simon Wenner  <simon@wenner.ch>
+ Copyright (C) 2021       Georg Lehmann
 
  GtkSourceView is free software; you can redistribute it and/or
  modify it under the terms of the GNU Lesser General Public
