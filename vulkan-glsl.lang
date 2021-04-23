@@ -367,6 +367,8 @@ http://www.opengl.org/registry/doc/GLSLangSpec.4.00.7.pdf
       <!-- GLSL_EXT_fragment_shading_rate -->
       <keyword>gl_ShadingRateEXT</keyword>
       <keyword>gl_PrimitiveShadingRateEXT</keyword>
+      <!-- GL_EXT_multiview -->
+      <keyword>gl_ViewIndex</keyword>
     </context>
 
     <context id="builtin-constants" style-ref="builtin-constant">
