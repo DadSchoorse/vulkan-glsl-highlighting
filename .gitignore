@@ -1,0 +1,7 @@
+# Ignore everything
+*
+
+# except
+!.gitignore
+!vulkan-glsl.lang
+!PKGBUILD
