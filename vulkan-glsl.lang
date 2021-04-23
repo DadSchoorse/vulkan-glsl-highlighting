@@ -131,9 +131,7 @@ http://www.opengl.org/registry/doc/GLSLangSpec.4.00.7.pdf
       <keyword>[iu]?sampler2DRect</keyword>
       <keyword>sampler2DRectShadow</keyword>
       <keyword>[iu]?samplerBuffer</keyword>
-      <keyword>[iu]?sampler2DMS</keyword>
-      <keyword>[iu]?sampler2DMSArray</keyword>
-      <keyword>[iu]?sampler2DMSCubeArray</keyword>
+      <keyword>[iu]?sampler2DMS((Cube)?Array)?</keyword>
       <keyword>samplerCubeArrayShadow</keyword>
       <!-- vulkan split image/sampler -->
       <keyword>sampler</keyword>
@@ -143,9 +141,7 @@ http://www.opengl.org/registry/doc/GLSLangSpec.4.00.7.pdf
       <keyword>[iu]?textureCube</keyword>
       <keyword>[iu]?texture2DRect</keyword>
       <keyword>[iu]?textureBuffer</keyword>
-      <keyword>[iu]?texture2DMS</keyword>
-      <keyword>[iu]?texture2DMSArray</keyword>
-      <keyword>[iu]?texture2DMSCubeArray</keyword>
+      <keyword>[iu]?texture2DMS((Cube)?Array)?</keyword>
       <!-- vulkan input attachment -->
       <keyword>[iu]?subpassInput</keyword>
       <keyword>[iu]?subpassInputMS</keyword>
@@ -238,22 +234,17 @@ http://www.opengl.org/registry/doc/GLSLangSpec.4.00.7.pdf
       <keyword>smoothstep</keyword>
       <keyword>isnan</keyword>
       <keyword>isinf</keyword>
-      <keyword>floatBitsToInt</keyword>
-      <keyword>floatBitsToUint</keyword>
-      <keyword>intBitsToFloat</keyword>
-      <keyword>uintBitsToFloat</keyword>
+      <keyword>floatBitsTo(Int|Uint)</keyword>
+      <keyword>[u]?intBitsToFloat</keyword>
       <keyword>fma</keyword>
       <keyword>frexp</keyword>
       <keyword>ldexp</keyword>
       <!-- Section 8.4 -->
       <keyword>packUnorm2x16</keyword>
-      <keyword>packUnorm4x8</keyword>
-      <keyword>packSnorm4x8</keyword>
+      <keyword>pack[US]norm4x8</keyword>
       <keyword>unpackUnorm2x16</keyword>
-      <keyword>unpackUnorm4x8</keyword>
-      <keyword>unpackSnorm4x8</keyword>
-      <keyword>packDouble2x32</keyword>
-      <keyword>unpackDouble2x32</keyword>
+      <keyword>unpack[US]norm4x8</keyword>
+      <keyword>(un)?packDouble2x32</keyword>
       <!-- Section 8.5 -->
       <keyword>length</keyword>
       <keyword>distance</keyword>
@@ -271,10 +262,8 @@ http://www.opengl.org/registry/doc/GLSLangSpec.4.00.7.pdf
       <keyword>determinant</keyword>
       <keyword>inverse</keyword>
       <!-- Section 8.7 -->
-      <keyword>lessThan</keyword>
-      <keyword>lessThanEqual</keyword>
-      <keyword>greaterThan</keyword>
-      <keyword>greaterThanEqual</keyword>
+      <keyword>lessThan(Equal)?</keyword>
+      <keyword>greaterThan(Equal)?</keyword>
       <keyword>equal</keyword>
       <keyword>notEqual</keyword>
       <keyword>any</keyword>
@@ -308,28 +297,18 @@ http://www.opengl.org/registry/doc/GLSLangSpec.4.00.7.pdf
       <keyword>textureGradOffset</keyword>
       <keyword>textureProjGrad</keyword>
       <keyword>textureProjGradOffset</keyword>
-      <keyword>textureGather</keyword>
-      <keyword>textureGatherOffset</keyword>
+      <keyword>textureGather(Offset)?</keyword>
 
       <!-- Section 8.10 -->
-      <keyword>dFdx</keyword>
-      <keyword>dFdy</keyword>
+      <keyword>dFd[xy]</keyword>
       <keyword>fwidth</keyword>
-      <keyword>interpolateAtCentroid</keyword>
-      <keyword>interpolateAtSample</keyword>
-      <keyword>interpolateAtOffset</keyword>
+      <keyword>interpolateAt(Centroid|Sample|Offset)</keyword>
       <!-- Section 8.12 -->
-      <keyword>EmitStreamVertex</keyword>
-      <keyword>EndStreamPrimitive</keyword>
-      <keyword>EmitVertex</keyword>
-      <keyword>EndPrimitive</keyword>
+      <keyword>Emit(Stream)?Vertex</keyword>
+      <keyword>End(Stream)?Primitive</keyword>
       <!-- Section 8.13 -->
       <keyword>barrier</keyword>
-      <keyword>memoryBarrier</keyword>
-      <keyword>memoryBarrier</keyword>
-      <keyword>memoryBarrierBuffer</keyword>
-      <keyword>memoryBarrierShared</keyword>
-      <keyword>memoryBarrierImage</keyword>
+      <keyword>memoryBarrier(Buffer|Shared|Image)?</keyword>
       <keyword>groupMemoryBarrier</keyword>
       <!-- GL_EXT_shader_explicit_arithmetic_types -->
       <keyword>pack(64|32|16)</keyword>
@@ -362,7 +341,7 @@ http://www.opengl.org/registry/doc/GLSLangSpec.4.00.7.pdf
     <context id="builtin-variables" style-ref="builtin-variable">
       <!-- Section 7.1 (vertex language) -->
       <keyword>gl_VertexIndex</keyword>
-      <keyword>gl_InstanceID</keyword>
+      <keyword>gl_InstanceIndex</keyword>
       <keyword>gl_Position</keyword>
       <keyword>gl_PointSize</keyword>
       <keyword>gl_ClipDistance</keyword>
@@ -441,60 +420,6 @@ http://www.opengl.org/registry/doc/GLSLangSpec.4.00.7.pdf
       <keyword>gl_MaxClipPlanes</keyword>
     </context>
 
-    <context id="builtin-uniform-states" style-ref="builtin-constant">
-      <!-- Section 7.4 -->
-      <keyword>gl_DepthRange</keyword>
-
-      <keyword>gl_ModelViewMatrix</keyword>
-      <keyword>gl_ProjectionMatrix</keyword>
-      <keyword>gl_ModelViewProjectionMatrix</keyword>
-      <keyword>gl_TextureMatrix</keyword>
-
-      <keyword>gl_NormalMatrix</keyword>
-
-      <keyword>gl_ModelViewMatrixInverse</keyword>
-      <keyword>gl_ProjectionMatrixInverse</keyword>
-      <keyword>gl_ModelViewProjectionMatrixInverse</keyword>
-      <keyword>gl_TextureMatrixInverse</keyword>
-
-      <keyword>gl_ModelViewMatrixTranspose</keyword>
-      <keyword>gl_ProjectionMatrixTranspose</keyword>
-      <keyword>gl_ModelViewProjectionMatrixTranspose</keyword>
-      <keyword>gl_TextureMatrixTranspose</keyword>
-
-      <keyword>gl_ModelViewMatrixInverseTranspose</keyword>
-      <keyword>gl_ProjectionMatrixInverseTranspose</keyword>
-      <keyword>gl_ModelViewProjectionMatrixInverseTranspose</keyword>
-      <keyword>gl_TextureMatrixInverseTranspose</keyword>
-
-      <keyword>gl_NormalScale</keyword>
-      <keyword>gl_ClipPlane</keyword>
-      <keyword>gl_Point</keyword>
-
-      <keyword>gl_FrontMaterial</keyword>
-      <keyword>gl_BackMaterial</keyword>
-
-      <keyword>gl_LightSource</keyword>
-      <keyword>gl_LightModel</keyword>
-
-      <keyword>gl_FrontLightModelProduct</keyword>
-      <keyword>gl_BackLightModelProduct</keyword>
-
-      <keyword>gl_FrontLightProduct</keyword>
-      <keyword>gl_BackLightProduct</keyword>
-
-      <keyword>gl_TextureEnvColor</keyword>
-      <keyword>gl_EyePlaneS</keyword>
-      <keyword>gl_EyePlaneT</keyword>
-      <keyword>gl_EyePlaneR</keyword>
-      <keyword>gl_EyePlaneQ</keyword>
-      <keyword>gl_ObjectPlaneS</keyword>
-      <keyword>gl_ObjectPlaneT</keyword>
-      <keyword>gl_ObjectPlaneR</keyword>
-      <keyword>gl_ObjectPlaneQ</keyword>
-
-      <keyword>gl_Fog</keyword>
-    </context>
 
     <context id="glsl-vulkan">
       <include>
@@ -514,7 +439,6 @@ http://www.opengl.org/registry/doc/GLSLangSpec.4.00.7.pdf
         <context ref="builtin-functions"/>
         <context ref="builtin-variables"/>
         <context ref="builtin-constants"/>
-        <context ref="builtin-uniform-states"/>
         <context ref="reserved-keywords-for-future-use"/>
       </include>
     </context>
