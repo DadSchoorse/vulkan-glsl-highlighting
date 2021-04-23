@@ -321,6 +321,8 @@ http://www.opengl.org/registry/doc/GLSLangSpec.4.00.7.pdf
       <keyword>helperInvocationEXT</keyword>
       <!-- GL_EXT_shader_realtime_clock -->
       <keyword>clockRealtime(2x32)?EXT</keyword>
+      <!-- GL_AMD_shader_fragment_mask -->
+      <keyword>fragment(Mask)?FetchAMD</keyword>
     </context>
 
     <context id="builtin-variables" style-ref="builtin-variable">
