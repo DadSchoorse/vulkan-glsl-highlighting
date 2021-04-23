@@ -195,18 +195,7 @@ http://www.opengl.org/registry/doc/GLSLangSpec.4.00.7.pdf
       <!-- Section 8.1 -->
       <keyword>radians</keyword>
       <keyword>degrees</keyword>
-      <keyword>sin</keyword>
-      <keyword>cos</keyword>
-      <keyword>tan</keyword>
-      <keyword>asin</keyword>
-      <keyword>acos</keyword>
-      <keyword>atan</keyword>
-      <keyword>sinh</keyword>
-      <keyword>cosh</keyword>
-      <keyword>tanh</keyword>
-      <keyword>asinh</keyword>
-      <keyword>acosh</keyword>
-      <keyword>atanh</keyword>
+      <keyword>(a)?(sin|acosh|tan)(h)?</keyword>
       <!-- Section 8.2 -->
       <keyword>pow</keyword>
       <keyword>exp</keyword>
@@ -220,12 +209,10 @@ http://www.opengl.org/registry/doc/GLSLangSpec.4.00.7.pdf
       <keyword>sign</keyword>
       <keyword>floor</keyword>
       <keyword>trunc</keyword>
-      <keyword>round</keyword>
-      <keyword>roundEven</keyword>
+      <keyword>round(Even)?</keyword>
       <keyword>ceil</keyword>
       <keyword>fract</keyword>
-      <keyword>mod</keyword>
-      <keyword>modf</keyword>
+      <keyword>mod(f)?</keyword>
       <keyword>min</keyword>
       <keyword>max</keyword>
       <keyword>clamp</keyword>
@@ -272,14 +259,10 @@ http://www.opengl.org/registry/doc/GLSLangSpec.4.00.7.pdf
       <!-- Section 8.8 -->
       <keyword>uaddCarry</keyword>
       <keyword>usubBorrow</keyword>
-      <keyword>umulExtended</keyword>
-      <keyword>imulExtended</keyword>
-      <keyword>bitfieldExtract</keyword>
-      <keyword>bitfildInsert</keyword>
-      <keyword>bitfieldReverse</keyword>
+      <keyword>[iu]mulExtended</keyword>
+      <keyword>bitfield(Extract|Insert|Reverse)</keyword>
       <keyword>bitCount</keyword>
-      <keyword>findLSB</keyword>
-      <keyword>findMSB</keyword>
+      <keyword>find[LM]SB</keyword>
       <!-- Section 8.9 -->
       <keyword>textureSize</keyword>
       <keyword>textureQueryLOD</keyword>
@@ -414,10 +397,6 @@ http://www.opengl.org/registry/doc/GLSLangSpec.4.00.7.pdf
       <keyword>gl_MaxTessPatchComponents</keyword>
       <keyword>gl_MaxPatchVertices</keyword>
       <keyword>gl_MaxTessGenLevel</keyword>
-      <!-- Section 7.3.1 (compatibility profile) -->
-      <keyword>gl_MaxTextureUnits</keyword>
-      <keyword>gl_MaxTextureCoords</keyword>
-      <keyword>gl_MaxClipPlanes</keyword>
     </context>
 
 
