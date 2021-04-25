@@ -442,6 +442,7 @@ https://www.khronos.org/registry/OpenGL/specs/gl/GLSLangSpec.4.60.html
         <context ref="def:c-like-comment-multiline"/>
         <context ref="def:c-like-close-comment-outside-comment"/>
         <context ref="c:if0-comment"/>
+        <context ref="c:include"/>
         <context ref="preprocessor"/>
         <context ref="common-macros"/>
         <context ref="keywords"/>

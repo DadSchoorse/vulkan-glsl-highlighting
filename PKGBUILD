@@ -1,6 +1,6 @@
 # Maintainer: Georg Lehmann
 pkgname=gtksourceview-vulkan-glsl
-pkgver=1.0.3
+pkgver=1.0.4
 pkgrel=1
 pkgdesc="Syntax highlighting for Vulkan GLSL"
 url="https://github.com/DadSchoorse/vulkan-glsl-highlighting"
