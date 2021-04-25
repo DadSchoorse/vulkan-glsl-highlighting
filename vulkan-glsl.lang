@@ -24,9 +24,8 @@
 -->
 
 <!--
- Defines all symbols of the OpenGL Shading Language (GLSL) version 4.0.
- Specification (February 12, 2010):
-http://www.opengl.org/registry/doc/GLSLangSpec.4.00.7.pdf
+ Defines all symbols of the OpenGL Shading Language (GLSL) version 4.6 + common Vulkan extensions - compatibility profile.
+https://www.khronos.org/registry/OpenGL/specs/gl/GLSLangSpec.4.60.html
 -->
 <language id="glsl-vulkan" _name="Vulkan GLSL" version="2.0" _section="Source">
 
@@ -84,13 +83,11 @@ http://www.opengl.org/registry/doc/GLSLangSpec.4.00.7.pdf
       <keyword>case</keyword>
       <keyword>default</keyword>
       <!-- qualifiers -->
-      <keyword>attribute</keyword>
       <keyword>const</keyword>
       <keyword>in</keyword>
       <keyword>inout</keyword>
       <keyword>out</keyword>
       <keyword>uniform</keyword>
-      <keyword>varying</keyword>
       <keyword>invariant</keyword>
       <keyword>centroid</keyword>
       <keyword>flat</keyword>
@@ -99,11 +96,18 @@ http://www.opengl.org/registry/doc/GLSLangSpec.4.00.7.pdf
       <keyword>layout</keyword>
       <keyword>patch</keyword>
       <keyword>sample</keyword>
+      <keyword>shared</keyword>
+      <keyword>coherent</keyword>
+      <keyword>volatile</keyword>
+      <keyword>restrict</keyword>
+      <keyword>readonly</keyword>
+      <keyword>writeonly</keyword>
       <!-- precision -->
       <keyword>lowp</keyword>
       <keyword>mediump</keyword>
       <keyword>highp</keyword>
       <keyword>precision</keyword>
+      <keyword>precise</keyword>
       <!-- vulkan -->
       <keyword>offset</keyword>
       <keyword>align</keyword>
@@ -122,6 +126,7 @@ http://www.opengl.org/registry/doc/GLSLangSpec.4.00.7.pdf
       <keyword>[bdiu]?vec[2-4]</keyword>
       <keyword>[d]?mat[2-4]</keyword>
       <keyword>[d]?mat[2-4]x[2-4]</keyword>
+      <keyword>buffer</keyword>
       <keyword>[iu]?sampler[1-3]D</keyword>
       <keyword>sampler[1-2]DShadow</keyword>
       <keyword>[iu]?sampler[1-2]DArray</keyword>
@@ -133,6 +138,11 @@ http://www.opengl.org/registry/doc/GLSLangSpec.4.00.7.pdf
       <keyword>[iu]?samplerBuffer</keyword>
       <keyword>[iu]?sampler2DMS((Cube)?Array)?</keyword>
       <keyword>samplerCubeArrayShadow</keyword>
+      <!-- storage image types -->
+      <keyword>[iu]?image[1-2]D(MS)?(Array)?</keyword>
+      <keyword>[iu]?image3D</keyword>
+      <keyword>[iu]?imageCube(Array)?</keyword>
+      <keyword>[iu]?imageBuffer</keyword>
       <!-- vulkan split image/sampler -->
       <keyword>sampler</keyword>
       <keyword>samplerShadow</keyword>
@@ -189,6 +199,9 @@ http://www.opengl.org/registry/doc/GLSLangSpec.4.00.7.pdf
       <keyword>namespace</keyword>
       <keyword>using</keyword>
       <keyword>row_major</keyword>
+      <!-- deprecated -->
+      <keyword>attribute</keyword>
+      <keyword>varying</keyword>
     </context>
 
     <context id="builtin-functions" style-ref="builtin-function">
@@ -263,6 +276,8 @@ http://www.opengl.org/registry/doc/GLSLangSpec.4.00.7.pdf
       <keyword>bitfield(Extract|Insert|Reverse)</keyword>
       <keyword>bitCount</keyword>
       <keyword>find[LM]SB</keyword>
+
+      <keyword>Atomic(Add|Min|Max|And|Or|Xor|Exchange|CompSwap)</keyword>
       <!-- Section 8.9 -->
       <keyword>textureSize</keyword>
       <keyword>textureQueryLOD</keyword>
@@ -282,9 +297,16 @@ http://www.opengl.org/registry/doc/GLSLangSpec.4.00.7.pdf
       <keyword>textureProjGradOffset</keyword>
       <keyword>textureGather(Offset)?</keyword>
 
+      <keyword>subpassLoad</keyword>
+      <keyword>imageSize</keyword>
+      <keyword>imageSamples</keyword>
+      <keyword>imageLoad</keyword>
+      <keyword>imageStore</keyword>
+      <keyword>imageAtomic(Add|Min|Max|And|Or|Xor|Exchange|CompSwap)</keyword>
+
       <!-- Section 8.10 -->
-      <keyword>dFd[xy]</keyword>
-      <keyword>fwidth</keyword>
+      <keyword>dFd[xy](Fine|Coarse)?</keyword>
+      <keyword>fwidth(Fine|Coarse)?</keyword>
       <keyword>interpolateAt(Centroid|Sample|Offset)</keyword>
       <!-- Section 8.12 -->
       <keyword>Emit(Stream)?Vertex</keyword>
@@ -332,11 +354,13 @@ http://www.opengl.org/registry/doc/GLSLangSpec.4.00.7.pdf
       <keyword>gl_Position</keyword>
       <keyword>gl_PointSize</keyword>
       <keyword>gl_ClipDistance</keyword>
+      <keyword>gl_CullDistance</keyword>
       <!-- Section 7.1 (geometry language) -->
       <keyword>gl_PrimitiveIDIn</keyword>
       <keyword>gl_InvocationID</keyword>
       <keyword>gl_PrimitiveID</keyword>
       <keyword>gl_Layer</keyword>
+      <keyword>gl_ViewportIndex</keyword>
       <!-- Section 7.1 (tessellation control language) -->
       <keyword>gl_PatchVerticesIn</keyword>
       <keyword>gl_TessLevelOuter</keyword>
@@ -349,10 +373,9 @@ http://www.opengl.org/registry/doc/GLSLangSpec.4.00.7.pdf
       <keyword>gl_PointCoord</keyword>
       <keyword>gl_SampleID</keyword>
       <keyword>gl_SamplePosition</keyword>
-      <keyword>gl_FragColor</keyword>
-      <keyword>gl_FragData</keyword>
       <keyword>gl_FragDepth</keyword>
       <keyword>gl_SampleMask</keyword>
+      <keyword>gl_SampleMaskIn</keyword>
       <!-- compute -->
       <keyword>gl_NumWorkGroups</keyword>
       <keyword>gl_WorkGroupSize</keyword>
@@ -376,9 +399,8 @@ http://www.opengl.org/registry/doc/GLSLangSpec.4.00.7.pdf
     <context id="builtin-constants" style-ref="builtin-constant">
       <!-- Section 7.3 -->
       <keyword>gl_MaxVertexAttribs</keyword>
+      <keyword>gl_MaxVertexUniformVectors</keyword>
       <keyword>gl_MaxVertexUniformComponents</keyword>
-      <keyword>gl_MaxVaryingFloats</keyword>
-      <keyword>gl_MaxVaryingComponents</keyword>
       <keyword>gl_MaxVertexOutputComponents</keyword>
       <keyword>gl_MaxGeometryInputComponents</keyword>
       <keyword>gl_MaxGeometryOutputComponents</keyword>
