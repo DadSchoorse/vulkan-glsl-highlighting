@@ -1,6 +1,6 @@
 # Maintainer: Georg Lehmann
 pkgname=gtksourceview-vulkan-glsl
-pkgver=1.0.4
+pkgver=1.0.5
 pkgrel=1
 pkgdesc="Syntax highlighting for Vulkan GLSL"
 url="https://github.com/DadSchoorse/vulkan-glsl-highlighting"
@@ -10,6 +10,6 @@ source=("vulkan-glsl.lang")
 sha512sums=('SKIP')
 
 package() {
-        mkdir -p "${pkgdir}/usr/share/gtksourceview-3.0/language-specs"
-        cp vulkan-glsl.lang "${pkgdir}/usr/share/gtksourceview-3.0/language-specs"
+        mkdir -p "${pkgdir}/usr/share/gtksourceview-4/language-specs"
+        cp vulkan-glsl.lang "${pkgdir}/usr/share/gtksourceview-4/language-specs"
 }
