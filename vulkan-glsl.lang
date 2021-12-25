@@ -414,6 +414,8 @@ https://www.khronos.org/registry/OpenGL/specs/gl/GLSLangSpec.4.60.html
       <keyword>gl_PrimitiveShadingRateEXT</keyword>
       <!-- GL_EXT_multiview -->
       <keyword>gl_ViewIndex</keyword>
+      <!-- GL_ARB_shader_stencil_export -->
+      <keyword>gl_FragStencilRefARB</keyword>
     </context>
 
     <context id="builtin-constants" style-ref="builtin-constant">
