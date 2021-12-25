@@ -297,7 +297,7 @@ https://www.khronos.org/registry/OpenGL/specs/gl/GLSLangSpec.4.60.html
       <keyword>textureGradOffset</keyword>
       <keyword>textureProjGrad</keyword>
       <keyword>textureProjGradOffset</keyword>
-      <keyword>textureGather(Offset)?</keyword>
+      <keyword>textureGather(Offset|Offsets)?</keyword>
 
       <keyword>subpassLoad</keyword>
       <keyword>imageSize</keyword>
@@ -349,6 +349,8 @@ https://www.khronos.org/registry/OpenGL/specs/gl/GLSLangSpec.4.60.html
       <keyword>fragment(Mask)?FetchAMD</keyword>
       <!-- GL_ARB_fragment_shader_interlock -->
       <keyword>(begin|end)InvocationInterlockARB</keyword>
+      <!-- GL_AMD_texture_gather_bias_lod -->
+      <keyword>textureGatherLod(Offset|Offsets)?AMD</keyword>
     </context>
 
     <context id="builtin-variables" style-ref="builtin-variable">
