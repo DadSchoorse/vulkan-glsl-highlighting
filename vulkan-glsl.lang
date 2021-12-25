@@ -143,10 +143,10 @@ https://www.khronos.org/registry/OpenGL/specs/gl/GLSLangSpec.4.60.html
       <keyword>[iu]?sampler2DMS((Cube)?Array)?</keyword>
       <keyword>samplerCubeArrayShadow</keyword>
       <!-- storage image types -->
-      <keyword>[iu]?image[1-2]D(MS)?(Array)?</keyword>
-      <keyword>[iu]?image3D</keyword>
-      <keyword>[iu]?imageCube(Array)?</keyword>
-      <keyword>[iu]?imageBuffer</keyword>
+      <keyword>([iu](64)?)?image[1-2]D(MS)?(Array)?</keyword>
+      <keyword>([iu](64)?)?image3D</keyword>
+      <keyword>([iu](64)?)?imageCube(Array)?</keyword>
+      <keyword>([iu](64)?)?imageBuffer</keyword>
       <!-- vulkan split image/sampler -->
       <keyword>sampler</keyword>
       <keyword>samplerShadow</keyword>
