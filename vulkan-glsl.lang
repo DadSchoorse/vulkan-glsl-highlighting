@@ -115,6 +115,8 @@ https://www.khronos.org/registry/OpenGL/specs/gl/GLSLangSpec.4.60.html
       <keyword>demote</keyword>
       <!-- GL_ARB_fragment_shader_interlock -->
       <keyword>(pixel|sample)_interlock_(un)?ordered</keyword>
+      <!-- GLSL_EXT_buffer_reference -->
+      <keyword>buffer_reference(_align)?</keyword>
     </context>
 
     <context id="primitives" style-ref="type">
