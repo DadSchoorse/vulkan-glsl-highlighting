@@ -416,6 +416,9 @@ https://www.khronos.org/registry/OpenGL/specs/gl/GLSLangSpec.4.60.html
       <keyword>gl_ViewIndex</keyword>
       <!-- GL_ARB_shader_stencil_export -->
       <keyword>gl_FragStencilRefARB</keyword>
+      <!-- GL_ARB_shader_draw_parameters -->
+      <keyword>gl_DrawIDARB</keyword>
+      <keyword>gl_Base(Vertex|Instance)ARB</keyword>
     </context>
 
     <context id="builtin-constants" style-ref="builtin-constant">
