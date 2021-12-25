@@ -360,6 +360,8 @@ https://www.khronos.org/registry/OpenGL/specs/gl/GLSLangSpec.4.60.html
       <!-- GL_AMD_shader_image_load_store_lod -->
       <keyword>sparseImageLoadLodAMD</keyword>
       <keyword>image(Load|Store)LodAMD</keyword>
+      <!-- GL_AMD_shader_trinary_minmax -->
+      <keyword>(min|max|mid)3</keyword>
     </context>
 
     <context id="builtin-variables" style-ref="builtin-variable">
