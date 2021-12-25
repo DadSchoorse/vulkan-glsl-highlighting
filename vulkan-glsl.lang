@@ -113,6 +113,8 @@ https://www.khronos.org/registry/OpenGL/specs/gl/GLSLangSpec.4.60.html
       <keyword>align</keyword>
       <!-- GL_EXT_demote_to_helper_invocation -->
       <keyword>demote</keyword>
+      <!-- GL_ARB_fragment_shader_interlock -->
+      <keyword>(pixel|sample)_interlock_(un)?ordered</keyword>
     </context>
 
     <context id="primitives" style-ref="type">
@@ -345,6 +347,8 @@ https://www.khronos.org/registry/OpenGL/specs/gl/GLSLangSpec.4.60.html
       <keyword>clockRealtime(2x32)?EXT</keyword>
       <!-- GL_AMD_shader_fragment_mask -->
       <keyword>fragment(Mask)?FetchAMD</keyword>
+      <!-- GL_ARB_fragment_shader_interlock -->
+      <keyword>(begin|end)InvocationInterlockARB</keyword>
     </context>
 
     <context id="builtin-variables" style-ref="builtin-variable">
