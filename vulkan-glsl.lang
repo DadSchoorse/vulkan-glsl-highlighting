@@ -362,6 +362,9 @@ https://www.khronos.org/registry/OpenGL/specs/gl/GLSLangSpec.4.60.html
       <keyword>image(Load|Store)LodAMD</keyword>
       <!-- GL_AMD_shader_trinary_minmax -->
       <keyword>(min|max|mid)3</keyword>
+      <!-- GL_AMD_gcn_shader -->
+      <keyword>cubeFace(Coord|Index)AMD</keyword>
+      <keyword>timeAMD</keyword>
     </context>
 
     <context id="builtin-variables" style-ref="builtin-variable">
