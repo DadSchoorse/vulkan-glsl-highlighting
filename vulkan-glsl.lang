@@ -357,6 +357,9 @@ https://www.khronos.org/registry/OpenGL/specs/gl/GLSLangSpec.4.60.html
       <keyword>(add|subtract)Saturate</keyword>
       <keyword>average(Rounded)?</keyword>
       <keyword>multiply32x16</keyword>
+      <!-- GL_AMD_shader_image_load_store_lod -->
+      <keyword>sparseImageLoadLodAMD</keyword>
+      <keyword>image(Load|Store)LodAMD</keyword>
     </context>
 
     <context id="builtin-variables" style-ref="builtin-variable">
