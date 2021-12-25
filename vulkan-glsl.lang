@@ -351,6 +351,12 @@ https://www.khronos.org/registry/OpenGL/specs/gl/GLSLangSpec.4.60.html
       <keyword>(begin|end)InvocationInterlockARB</keyword>
       <!-- GL_AMD_texture_gather_bias_lod -->
       <keyword>textureGatherLod(Offset|Offsets)?AMD</keyword>
+      <!-- GL_INTEL_shader_integer_functions2 -->
+      <keyword>count(Leading|Trailing)Zeros</keyword>
+      <keyword>absoluteDifference</keyword>
+      <keyword>(add|subtract)Saturate</keyword>
+      <keyword>average(Rounded)?</keyword>
+      <keyword>multiply32x16</keyword>
     </context>
 
     <context id="builtin-variables" style-ref="builtin-variable">
